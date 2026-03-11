@@ -38,6 +38,10 @@ After installation, simply ask Claude about your token usage:
 "显示会话使用情况"
 ```
 
+## Example
+
+![ccusage example](assets/example.png)
+
 ## Commands Reference
 
 | Command | Description |
