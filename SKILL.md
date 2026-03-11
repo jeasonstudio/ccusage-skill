@@ -10,7 +10,7 @@ Analyze token consumption and costs from Claude Code CLI usage.
 ## Quick Start
 
 ```bash
-ccusage --json --offline
+npx ccusage@latest --json --offline
 ```
 
 Default command shows daily breakdown. Always use `--json` for structured output and `--offline` to avoid API calls.
@@ -19,27 +19,27 @@ Default command shows daily breakdown. Always use `--json` for structured output
 
 | Command | Description |
 |---------|-------------|
-| `ccusage daily` | Usage by date (default) |
-| `ccusage monthly` | Usage by month |
-| `ccusage weekly` | Usage by week |
-| `ccusage session` | Usage by conversation session |
-| `ccusage blocks` | Usage by billing blocks (5-hour windows) |
-| `ccusage statusline` | Compact status for hooks |
+| `npx ccusage@latest daily` | Usage by date (default) |
+| `npx ccusage@latest monthly` | Usage by month |
+| `npx ccusage@latest weekly` | Usage by week |
+| `npx ccusage@latest session` | Usage by conversation session |
+| `npx ccusage@latest blocks` | Usage by billing blocks (5-hour windows) |
+| `npx ccusage@latest statusline` | Compact status for hooks |
 
 ## Common Filters
 
 ```bash
 # Date range
-ccusage daily --json --offline --since 20260301 --until 20260311
+npx ccusage@latest daily --json --offline --since 20260301 --until 20260311
 
 # Specific project
-ccusage daily --json --offline --project "my-project"
+npx ccusage@latest daily --json --offline --project "my-project"
 
 # Model breakdown
-ccusage daily --json --offline --breakdown
+npx ccusage@latest daily --json --offline --breakdown
 
 # Instance breakdown
-ccusage daily --json --offline --instances
+npx ccusage@latest daily --json --offline --instances
 ```
 
 ## JSON Output Structure
@@ -95,22 +95,22 @@ ccusage daily --json --offline --instances
 
 **Today's usage:**
 ```bash
-ccusage daily --json --offline --since $(date +%Y%m%d)
+npx ccusage@latest daily --json --offline --since $(date +%Y%m%d)
 ```
 
 **This month:**
 ```bash
-ccusage monthly --json --offline --since $(date +%Y%m01)
+npx ccusage@latest monthly --json --offline --since $(date +%Y%m01)
 ```
 
 **Cost by model:**
 ```bash
-ccusage daily --json --offline --breakdown
+npx ccusage@latest daily --json --offline --breakdown
 ```
 
 **Most active sessions:**
 ```bash
-ccusage session --json --offline --order desc
+npx ccusage@latest session --json --offline --order desc
 ```
 
 ## Key Options

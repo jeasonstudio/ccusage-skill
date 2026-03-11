@@ -10,10 +10,10 @@ npx skills add jeasonstudio/ccusage-skill --agent claude-code
 
 ## Prerequisites
 
-Install ccusage globally:
+No global installation needed. ccusage is called via npx:
 
 ```bash
-npm install -g ccusage
+npx ccusage@latest --help
 ```
 
 ## Usage
@@ -42,26 +42,26 @@ After installation, simply ask Claude about your token usage:
 
 | Command | Description |
 |---------|-------------|
-| `ccusage daily` | Usage by date (default) |
-| `ccusage monthly` | Usage by month |
-| `ccusage weekly` | Usage by week |
-| `ccusage session` | Usage by conversation session |
-| `ccusage blocks` | Usage by billing blocks |
+| `npx ccusage@latest daily` | Usage by date (default) |
+| `npx ccusage@latest monthly` | Usage by month |
+| `npx ccusage@latest weekly` | Usage by week |
+| `npx ccusage@latest session` | Usage by conversation session |
+| `npx ccusage@latest blocks` | Usage by billing blocks |
 
 ## Common Options
 
 ```bash
 # Date range
-ccusage daily --json --offline --since 20260301 --until 20260311
+npx ccusage@latest daily --json --offline --since 20260301 --until 20260311
 
 # Specific project
-ccusage daily --json --offline --project "my-project"
+npx ccusage@latest daily --json --offline --project "my-project"
 
 # Model breakdown
-ccusage daily --json --offline --breakdown
+npx ccusage@latest daily --json --offline --breakdown
 
 # Sort by newest first
-ccusage daily --json --offline --order desc
+npx ccusage@latest daily --json --offline --order desc
 ```
 
 ## License
